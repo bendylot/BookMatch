@@ -206,5 +206,19 @@ marimo/_static/
 marimo/_lsp/
 __marimo__/
 
-# игнорируем pycharm-настройки
+# PyCharm
 .idea/
+
+# Virtual environment
+.venv/
+
+# Python cache
+*.pyc
+
+# Data
+/data/raw/
+/data/processed/
+
+# OS files
+.DS_Store
+Thumbs.db
