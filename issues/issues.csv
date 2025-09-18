@@ -1,0 +1,20 @@
+title,body,labels,project
+"Сформулировать user story","Как читатель, я хочу ввести любимую книгу и получить похожие рекомендации.","Product,Iteration:1","https://github.com/users/bendylot/projects/3"
+"Определить метрику MVP","Основная метрика: precision@5 ≥ 0.4. Дополнительно: retention первых 10 пользователей.","Product,Iteration:1","https://github.com/users/bendylot/projects/3"
+"Найти датасет","Взять Kaggle Goodreads или OpenLibrary API. Минимум: 1000 книг с описаниями и жанрами.","Data,Iteration:1","https://github.com/users/bendylot/projects/3"
+"Сделать EDA","Построить распределения жанров, длину описаний, проверить дубликаты и пропуски.","Data,Iteration:1","https://github.com/users/bendylot/projects/3"
+"Сделать baseline-модель","TF-IDF + cosine similarity по описаниям книг. Сравнить топ-5 рекомендаций.","Model,Iteration:1","https://github.com/users/bendylot/projects/3"
+"Скрипт: CSV → TXT рекомендации","Загрузить CSV с книгами, сгенерировать TXT с рекомендациями (5 книг).","Model,Iteration:1","https://github.com/users/bendylot/projects/3"
+"Документация MVP","README с примером запуска скрипта и описанием результатов.","Docs,Iteration:1","https://github.com/users/bendylot/projects/3"
+
+"API: FastAPI загрузка CSV","Эндпоинт /upload принимает CSV с книгами, возвращает JSON из 5 рекомендаций.","API,Iteration:2","https://github.com/users/bendylot/projects/3"
+"UI: простая форма загрузки","Форма на веб-странице: загрузка CSV → вывод 5 строк с книгами.","UI,Iteration:2","https://github.com/users/bendylot/projects/3"
+"Собрать Docker образ (API + UI)","Dockerfile для запуска сервиса с API и UI.","Deployment,Iteration:2","https://github.com/users/bendylot/projects/3"
+"CI/CD GitHub Actions","Пайплайн: тесты, линтер, сборка Docker-образа.","Deployment,Iteration:2","https://github.com/users/bendylot/projects/3"
+"Документация API","Пример запроса /upload с CSV и ответа (JSON/HTML).","Docs,Iteration:2","https://github.com/users/bendylot/projects/3"
+
+"UI: поиск книги","Строка поиска → выбор книги из CSV.","UI,Iteration:3","https://github.com/users/bendylot/projects/3"
+"UI: корзина","Добавить возможность складывать выбранные книги в корзину перед рекомендацией.","UI,Iteration:3","https://github.com/users/bendylot/projects/3"
+"API: рекомендации по корзине","Эндпоинт /recommend анализирует корзину и возвращает 5 книг.","API,Iteration:3","https://github.com/users/bendylot/projects/3"
+"UI: кнопка «Предложить книги»","По нажатию кнопки отправляем корзину на сервер → получаем 5 книг.","UI,Iteration:3","https://github.com/users/bendylot/projects/3"
+"Demo презентация Iteration 3","Короткое видео/скринкаст работы сервиса: поиск → корзина → рекомендации.","Docs,Iteration:3","https://github.com/users/bendylot/projects/3"
