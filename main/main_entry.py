@@ -1,23 +1,14 @@
-from sklearn.feature_extraction.text import TfidfVectorizer
-import numpy as np
+from datasets.kaggle_datasets_loader import get_path_dataset
+from datasets.report import dataset_report
+from datasets.eda_dataframe import book_rating, books, users
 
 from data.data_utils import get_data_frame
+from data.clean_dataframe import book_rating_clean_dataframe, books_clean_dataframe
+
 from model.base_line_model import vectorize
 
 if __name__ == "__main__":
-    # Загружаю уже обработанный чистый Dataframe из датасета
-    df = get_data_frame()
-    list_description = df["description"].tolist()
+    df_book_rating = book_rating()
+    df_books = books()
+    df_users = users()
 
-    # 1. Обучаем векторизатор и получаем матрицу
-    X, vectorizer = vectorize(list_description)
-
-    feature_names = vectorizer.get_feature_names_out()
-    word_sums = np.array(X.sum(axis=0)).flatten()
-
-    # Берём индексы 10 самых "сильных" слов
-    top_indices = word_sums.argsort()[::-1][:10]
-
-    # Выводим сами слова и их веса
-    for idx in top_indices:
-        print(feature_names[idx], word_sums[idx])
