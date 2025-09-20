@@ -1,21 +1,14 @@
-from pathlib import Path
-import sys
-from data.json_validator import validate_json
-def start_get_file_path()-> str:
-    file_path = input("📂 Введите путь к json файлу с вашими данными: ").strip()
-    if not Path(file_path).exists():
-        print(f"❌ Файл не найден: {file_path}")
-        sys.exit(1)
-    print(f"✅ Файл найден: {file_path}")
-    return file_path
-def main():
-    file_path = start_get_file_path()
+from main.get_patch_user_data import start_get_file_path
+from data.json.json_validator import validate_json
+from model.recommended_books import recommended_books
+
+def main(file_path: str):
+    if(file_path==None):
+        file_path = start_get_file_path()
     config = validate_json(file_path)
-    if config:
-        print("Возраст:", config["UserInformation"]["Age"])
-        print("Книги:", [book["BookId"] for book in config["Library"]])
+    list_recommended_books = recommended_books(config)
 
 if __name__ == "__main__":
     print("🟢hello world")
-    main()
+    main(r"C:\Users\tomle\PycharmProjects\BookMatch\tests\maks-20.09.json")
     print("🚪Finish")

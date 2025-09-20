@@ -22,7 +22,7 @@ schema = {
                 "type": "object",
                 "properties": {
                     "BookId": {"type": "string"},
-                    "Rating": {"type": "string"}  # можно заменить на integer
+                    "Rating": {"type": "integer"}
                 },
                 "required": ["BookId", "Rating"]
             }

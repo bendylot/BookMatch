@@ -9,12 +9,12 @@
   "Library":
   [
     {
-      "BookId": "1234567",
-      "Rating": "7"
+      "BookId": "052165615X",
+      "Rating": 3
     },
     {
-      "BookId": "1234568",
-      "Rating": "6"
+      "BookId": "0521795029",
+      "Rating": 6
     }
   ]
 }

@@ -2,7 +2,7 @@
 
 def book_rating_clean_dataframe(data: pd.DataFrame) -> pd.DataFrame:
     # Фильтрация, строк, по значению в столбце
-    df_filtered = df[df["Book-Rating"] != 0]
+    df_filtered = data[data["Book-Rating"] != 0]
     return df_filtered
 def books_clean_dataframe(data: pd.DataFrame) -> pd.DataFrame:
     # Фильтрация определенных фич
