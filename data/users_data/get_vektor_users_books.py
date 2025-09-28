@@ -1,6 +1,6 @@
 ﻿import pandas as pd
-from data.users_data.df.get_dataframe import get_dataframe
-from data.users_data.df.clean_dataframe import book_rating_clean_dataframe
+from data.users_data.work_with_dataset.get_dataframe import get_dataframe
+from data.users_data.work_with_dataset.clean_dataframe import books_clean_dataframe, book_rating_clean_dataframe
 def vektor_from_dict(user_dict: dict) -> dict:
     return {book: (rating - 5) / 5 for book, rating in user_dict.items()}
 def normalize_user_dict(user_dict: dict) -> dict:

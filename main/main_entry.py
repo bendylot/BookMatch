@@ -7,6 +7,7 @@ def main(file_path: str):
         file_path = start_get_file_path()
     config = validate_json(file_path)
     list_recommended_books = recommended_books(config)
+    return
 
 if __name__ == "__main__":
     print("🟢hello world")

@@ -22,5 +22,5 @@ def get_most_similar_users(target_vector: dict, users_vectors: dict, top_n: int 
     most_similar = dict(
         sorted(similarities.items(), key=lambda item: item[1][1], reverse=True)[:top_n]
     )
-    print(len(most_similar))
+    print("Колличество похожих пользователей: ",len(most_similar))
     return most_similar
