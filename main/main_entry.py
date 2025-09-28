@@ -1,23 +1,15 @@
-from sklearn.feature_extraction.text import TfidfVectorizer
-import numpy as np
+from main.get_patch_user_data import start_get_file_path
+from data.json.json_validator import validate_json
+from model.recommended_books import recommended_books
 
-from data.data_utils import get_data_frame
-from model.base_line_model import vectorize
+def main(file_path: str):
+    if(file_path==None):
+        file_path = start_get_file_path()
+    config = validate_json(file_path)
+    list_recommended_books = recommended_books(config)
+    return
 
 if __name__ == "__main__":
-    # Загружаю уже обработанный чистый Dataframe из датасета
-    df = get_data_frame()
-    list_description = df["description"].tolist()
-
-    # 1. Обучаем векторизатор и получаем матрицу
-    X, vectorizer = vectorize(list_description)
-
-    feature_names = vectorizer.get_feature_names_out()
-    word_sums = np.array(X.sum(axis=0)).flatten()
-
-    # Берём индексы 10 самых "сильных" слов
-    top_indices = word_sums.argsort()[::-1][:10]
-
-    # Выводим сами слова и их веса
-    for idx in top_indices:
-        print(feature_names[idx], word_sums[idx])
+    print("🟢hello world")
+    main(r"C:\Users\tomle\PycharmProjects\BookMatch\tests\maks-20.09.json")
+    print("🚪Finish")

@@ -1,0 +1,20 @@
+﻿{
+  "UserInformation":
+  {
+    "Age": 21,
+    "Language": "Russian",
+    "Gender": "Male",
+    "Profession": "Software developer"
+  },
+  "Library":
+  [
+    {
+      "BookId": "0316666343",
+      "Rating": 10
+    },
+    {
+      "BookId": "0521795029",
+      "Rating": 6
+    }
+  ]
+}

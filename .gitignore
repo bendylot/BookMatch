@@ -211,6 +211,7 @@ __marimo__/
 
 # Virtual environment
 .venv/
+.venv
 
 # Python cache
 *.pyc
