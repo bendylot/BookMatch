@@ -1,6 +1,6 @@
-﻿from datasets.kaggle_datasets_loader import get_path_dataset
-from data.data_utils import get_data_frame
-from data.clean_dataframe import book_rating_clean_dataframe, books_clean_dataframe
+﻿from src.datasets.kaggle_datasets_loader import get_path_dataset
+from src.data.data_utils import get_data_frame
+from src.data.clean_dataframe import book_rating_clean_dataframe, books_clean_dataframe
 import pandas as pd
 
 def book_rating() -> pd.DataFrame:
