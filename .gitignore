@@ -137,9 +137,7 @@ celerybeat.pid
 # Environments
 .env
 .envrc
-.venv
 env/
-venv/
 ENV/
 env.bak/
 venv.bak/
@@ -209,9 +207,6 @@ __marimo__/
 # PyCharm
 .idea/
 
-# Virtual environment
-.venv/
-.venv
 
 # Python cache
 *.pyc
@@ -223,5 +218,3 @@ __marimo__/
 # OS files
 .DS_Store
 Thumbs.db
-
-.idea/*

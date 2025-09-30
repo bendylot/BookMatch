@@ -1,6 +1,8 @@
 ﻿import json
 import jsonschema
 from jsonschema import validate
+from src.data.other.get_patch_user_data import start_get_file_path
+from src.config_project import built_for_debug
 
 # Схема для валидации JSON
 schema = {
@@ -50,3 +52,11 @@ def validate_json(file_path: str) -> dict | None:
         print("❌ Неизвестная ошибка:", str(e))
 
     return None
+def get_config() -> dict | None:
+    if built_for_debug == True:
+        config = validate_json(r"C:\Users\tomle\PycharmProjects\BookMatch\src\tests\maks-20.09.json")
+        return config
+    else:
+        file_path = start_get_file_path()
+        config = validate_json(file_path)
+        return config
